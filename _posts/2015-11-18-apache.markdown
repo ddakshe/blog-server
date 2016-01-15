@@ -20,9 +20,9 @@ apache와 의존 패키지들을 다운받자.
 
 아래 사이트에 접속하면 다운로드가 가능하다
 ~~~
-- apache : http://www.apache.org/dyn/closer.cgi
-- apr/apr-util : https://apr.apache.org
-- pcre :  http://www.pcre.org
+* apache : http://www.apache.org/dyn/closer.cgi
+* apr/apr-util : https://apr.apache.org
+* pcre :  http://www.pcre.org
 ~~~
 
 Apache 설치를 하기 전에, 설치를 위한 존속성 패키지들을 먼저 설치한다.
