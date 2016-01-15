@@ -18,9 +18,9 @@ apache와 의존 패키지들을 다운받자.
 
 
 
-아래 사이트에 접속하면 다운로드가 가능하다
+아래 사이트에 접속하면 다운로드가 가능하다.
 ~~~
-* apache : http://www.apache.org/dyn/closer.cgi
+* apache : http://www.apache.org/dyn/closer.cgi  
 
 * apr/apr-util : https://apr.apache.org
 
