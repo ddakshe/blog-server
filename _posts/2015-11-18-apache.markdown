@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jdk 설치하기"
+title:  "apache 설치하기"
 date:   2015-11-19 21:58:52 +0900
 categories: jekyll update
 ---
@@ -14,15 +14,87 @@ apache설치를 위해서는 apache가 의존하는 패키지들을 설치해야
 
 apache와 의존 패키지들을 다운받자.
 
-위치는 JDK가 설치된 곳과 같은 디렉토리에
+다운로드 및 설치 위치는 하고 싶은곳에 하면 된다. 하지만 JDK 설치한 폴더에 하는게 좋다.
 
-그들의 항목은..
 
-wget http://ftp.neowiz.com/apache/httpd/httpd-2.4.17.tar.bz2
-wget http://ftp.neowiz.com/apache/apr/apr-1.5.2.tar.bz2
-wget http://ftp.neowiz.com/apache/apr/apr-util-1.5.4.tar.bz2
-wget http://downloads.sourceforge.net/project/pcre/pcre/8.33/pcre-8.33.tar.bz2
 
+아래 사이트에 접속하면 다운로드가 가능하다
+~~~
+– apache : http://www.apache.org/dyn/closer.cgi
+– apr/apr-util : https://apr.apache.org
+– pcre :  http://www.pcre.org
+~~~
+
+Apache 설치를 하기 전에, 설치를 위한 존속성 패키지들을 먼저 설치한다.
+
+{% highlight ruby %}
+apr 다운로드 및 설치
+{% endhighlight %}
+~~~
+다운로드
+$ wget http://mirror.apache-kr.org//apr/apr-1.5.2.tar.gz
+
+압축파일 해제
+$ tar xvfz apr-1.5.1.tar.gz
+
+$ cd apr-1.5.1
+$ ./configure
+$ make
+$ make install
+~~~
+
+{% highlight ruby %}
+apr-util 다운로드 및 설치
+{% endhighlight %}
+~~~
+$ wget http://mirror.apache-kr.org//apr/apr-util-1.5.4.tar.gz
+$ tar xvfz apr-util-1.5.4.tar.gz
+
+$ cd apr-util-1.5.4
+$ ./configure --with-apr=/usr/local/apr
+$ make
+$ make install
+~~~
+
+{% highlight ruby %}
+pcre 다운로드 및 설치
+{% endhighlight %}
+~~~
+$ cd ..
+$ wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-10.20.tar.gz
+$ tar xvfz pcre-8.36.tar.gz
+$ cd pcre-8.36
+$ ./configure --prefix=/usr/local/pcre
+$ make
+$ make install
+~~~
+
+{% highlight ruby %}
+아파치 다운로드 및 설치
+{% endhighlight %}
+~~~
+다운로드
+$ wget http://apache.tt.co.kr//httpd/httpd-2.4.18.tar.gz
+
+압축해제
+$ tar xvfz httpd-2.4.18.tar.gz
+
+$ cd httpd-2.4.8
+$ ./configure --prefix=/usr/local/apache --enable-http  --enable-info --enable-cgi --enable-so --with-pcre=/usr/local/pcre
+$ make
+$ make install
+~~~
+
+
+{% highlight ruby %}
+아파치 구동
+{% endhighlight %}
+~~~
+/usr/local/apache/bin/httpd -k start
+~~~
+
+브라우져에 자신의 IP로 접속해보자.
+잘되었다면 It works! 문구가 보인다.
 
 [참조] : http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%95%84%ED%8C%8C%EC%B9%98_%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84_%EC%84%A4%EC%B9%98_(%EC%BB%B4%ED%8C%8C%EC%9D%BC)
 
