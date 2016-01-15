@@ -16,7 +16,7 @@ categories: jekyll update
 
 1. JDK 다운로드
 
-{% highlight ruby %}
+```
 다운받을 디렉토리로 이동한다.
 http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html 사이트에 들어간 뒤
 Linux x64 파일의 링크주소를 복사한다.
@@ -28,21 +28,20 @@ wget http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar
 
 wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz
 그렇다면 이렇게 받아주자.
-{% endhighlight %}
+```
 
 
 2. JDK 파일 압축 풀기
 
-{% highlight ruby %}
+```
 $ sudo tar -xzvf [파일명]
 
 그럼 압축이 막 막 풀린다.
-{% endhighlight %}
-
+```
 
 3. 환경변수 설정
 
-{% highlight ruby %}
+```
 난 루트 계정이 아니기 때문에..
 
 $ sudo vim /etc/profile
@@ -61,5 +60,4 @@ $ source /etc/profile
 이제 끝났다. 확인해보자.
 
 $ java -version
-{% endhighlight %}
-
+```
