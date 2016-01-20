@@ -6,9 +6,8 @@ categories: jekyll update
 ---
 
 
-{% highlight ruby %}
- # adduser
-{% endhighlight %}
+
+ **adduser**
 
 ~~~
 권한 : root
@@ -27,9 +26,8 @@ ex)
    의 유저 등록
 ~~~
 
-{% highlight ruby %}
- $ alias
-{% endhighlight %}
+
+ **alias**
 
 ~~~
 설명 : 명령어를 수정한다.
