@@ -7,7 +7,7 @@ categories: jekyll update
 
 
 
- ##adduser##
+ ## adduser
 
 ~~~
 권한 : root
@@ -27,7 +27,7 @@ ex)
 ~~~
 
 
- ##alias##
+ ## alias
 
 ~~~
 설명 : 명령어를 수정한다.
