@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "scp _ 파일 복사 및 전송"
-date:   2015-11-19 21:58:52 +0900
+date:   2016-1-20 21:58:52 +0900
 categories: jekyll update
 ---
 
