@@ -5,7 +5,7 @@ date:   2016-5-3 12:10:00 +0900
 categories: jekyll update
 ---
 
-#tomcat 설치#
+# tomcat 설치 #
 
 먼저 ubuntu에서는 apt-get으로 tomcat을 설치한다.
 
