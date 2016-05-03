@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ubuntu tomcat 설치 / 80포트 사용하기"
-date:   2015-11-19 21:58:52 +0900
+date:   2016-5-3 12:10:00 +0900
 categories: jekyll update
 ---
 
